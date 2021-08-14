@@ -6,7 +6,7 @@ export class FilterPipe implements PipeTransform {
       val.name
         .toString()
         .toLowerCase()
-        .includes(search?.toString().toLowerCase() || '')
+        .includes(search?.trim().toString().toLowerCase() || '')
     );
   }
 }
