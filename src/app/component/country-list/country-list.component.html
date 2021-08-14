@@ -1,0 +1,24 @@
+<input
+  id="search"
+  name="search"
+  type="text"
+  class="w-full p-2 mb-2 border rounded focus:outline-none focus:border-blue-500"
+  placeholder="Search country..."
+  [(ngModel)]="search"
+/>
+<div class="h-146 overflow-y-auto scrollbar-sm">
+  <ng-container *ngIf="countryList | filter: search as fiterCountry">
+    <div *ngFor="let country of fiterCountry" class="flex items-center p-2 my-2 border border-blue-300 rounded">
+      <div class="flex-grow">
+        <p class="font-bold">{{ country.name }}</p>
+        <small><b>{{ country.capital || "No data" }}</b>, {{ country.subregion || "No data" }}</small>
+      </div>
+      <div class="flex-shark">
+        <p class="text-xs">Pop. <b class="text-blue-800">{{ country.population | number }}</b></p>
+      </div>
+    </div>
+    <p *ngIf="fiterCountry.length === 0" class="font-bold text-center mt-5">
+      - No Result -
+    </p>
+  </ng-container>
+</div>

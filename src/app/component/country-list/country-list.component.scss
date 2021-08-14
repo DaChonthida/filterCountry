@@ -1,0 +1,14 @@
+.h-146 {
+  height: 28rem;
+}
+.scrollbar-sm {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #eee;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+}
