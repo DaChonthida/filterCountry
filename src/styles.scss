@@ -10,8 +10,22 @@ svg#clouds {
   width: 1920px;
 }
 .w-150 {
-  width: 33rem;
+  width: 31rem;
 }
 .h-150 {
   height: 33rem;
+}
+.h-146 {
+  height: 28rem;
+}
+.scrollbar-sm {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: #eee;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
 }

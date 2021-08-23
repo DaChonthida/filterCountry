@@ -1,0 +1,30 @@
+<input
+  id="search"
+  name="search"
+  type="text"
+  class="w-full p-2 mb-2 border rounded focus:outline-none focus:border-red-500"
+  placeholder="Search country...(DoCheck)"
+  [(ngModel)]="search"
+/>
+<div class="h-146 overflow-y-auto scrollbar-sm">
+  <div
+    *ngFor="let country of filterList"
+    class="flex items-center p-2 my-2 border border-red-300 rounded"
+  >
+    <div class="flex-grow">
+      <p class="font-bold">{{ country.name }}</p>
+      <small
+        ><b>{{ country.capital || "No data" }}</b
+        >, {{ country.subregion || "No data" }}</small
+      >
+    </div>
+    <div class="flex-shark">
+      <p class="text-xs">
+        Pop. <b class="text-red-800">{{ country.population | number }}</b>
+      </p>
+    </div>
+  </div>
+  <p *ngIf="filterList.length === 0" class="font-bold text-center mt-5">
+    - No Result -
+  </p>
+</div>

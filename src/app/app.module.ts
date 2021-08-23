@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SearchBarComponent } from './component/country-list/country-list.component';
+import { CountryListComponent } from './component/country-list/country-list.component';
 import { LayoutComponent } from './component/layout/layout.component';
 import { FilterPipe } from './core/pipe/filter.pipe';
+import { CountryListTwoComponent } from './component/country-list-two/country-list-two.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,13 @@ import { FilterPipe } from './core/pipe/filter.pipe';
     HttpClientModule,
     RouterModule.forRoot([{ path: '', component: LayoutComponent }]),
   ],
-  declarations: [AppComponent, SearchBarComponent, LayoutComponent, FilterPipe],
+  declarations: [
+    AppComponent,
+    CountryListComponent,
+    LayoutComponent,
+    FilterPipe,
+    CountryListTwoComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

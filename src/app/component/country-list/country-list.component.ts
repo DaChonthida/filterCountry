@@ -6,7 +6,7 @@ import { CountryService } from 'src/app/core/services/country.service';
   templateUrl: './country-list.component.html',
   styleUrls: ['./country-list.component.scss'],
 })
-export class SearchBarComponent implements OnInit {
+export class CountryListComponent implements OnInit {
   countryList: any[] = [];
   search: any;
   constructor(public countryService: CountryService) {}
